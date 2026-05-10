@@ -1,0 +1,16 @@
+<Default>
+  <callManagerGroup>
+    <members>
+      <member priority="0">
+        <callManager>
+          <ports>
+            <ethernetPhonePort>2000</ethernetPhonePort>
+            <sipPort>5066</sipPort>
+          </ports>
+          <processNodeName>10.5.50.165</processNodeName>
+        </callManager>
+      </member>
+    </members>
+  </callManagerGroup>
+  <loadInformation>SIP894x.9-4-2SR2-2</loadInformation>
+</Default>

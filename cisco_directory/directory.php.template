@@ -1,0 +1,41 @@
+<?php
+/**
+ * Cisco IP Phone XML Directory Service
+ * 
+ * Serve a lista de ramais no formato XML que o Cisco CP-8945 entende.
+ * Coloque este arquivo em /var/www/html/directory.php no servidor Issabel.
+ * Aponte o <directoryURL> no SEP<MAC>.cnf.xml para http://<PBX_IP>/directory.php
+ * 
+ * Para pesquisa: http://<PBX_IP>/directory.php?name=texto
+ */
+
+header('Content-Type: text/xml; charset=UTF-8');
+
+$contacts = [
+    // ---- Grupos (Ring Groups) ----
+    ['name' => 'Grupo A | Grupo B',  'number' => '1000'],  // <-- edite conforme seus grupos
+    // ---- Ramais individuais ----
+    ['name' => 'Nome Ramal 1',       'number' => '1001'],  // <-- substitua pelos seus ramais
+    ['name' => 'Nome Ramal 2',       'number' => '1002'],
+    // Adicione mais conforme necessário...
+];
+
+// Filtro de busca (quando o telefone faz pesquisa pelo nome)
+$search = isset($_GET['name']) ? strtolower($_GET['name']) : '';
+
+echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+echo '<CiscoIPPhoneDirectory>' . "\n";
+echo '  <Title>Ramais</Title>' . "\n";
+echo '  <Prompt>Selecione um contato</Prompt>' . "\n";
+
+foreach ($contacts as $contact) {
+    if ($search === '' || strpos(strtolower($contact['name']), $search) !== false) {
+        echo '  <DirectoryEntry>' . "\n";
+        echo '    <Name>' . htmlspecialchars($contact['name']) . '</Name>' . "\n";
+        echo '    <Telephone>' . htmlspecialchars($contact['number']) . '</Telephone>' . "\n";
+        echo '  </DirectoryEntry>' . "\n";
+    }
+}
+
+echo '</CiscoIPPhoneDirectory>' . "\n";
+?>

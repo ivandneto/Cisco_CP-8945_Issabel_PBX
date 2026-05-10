@@ -1,0 +1,13 @@
+<Default>
+    <callManagerGroup>
+        <members>
+            <member priority="0">
+                <callManager>
+                    <processNodeName>10.5.50.165</processNodeName>
+                    <port>5060</port>
+                </callManager>
+            </member>
+        </members>
+    </callManagerGroup>
+    <loadInformation8945 model="Cisco 8945">SIP894x.9-2-2-0</loadInformation8945>
+</Default>

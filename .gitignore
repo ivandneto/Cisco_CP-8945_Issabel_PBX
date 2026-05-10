@@ -1,0 +1,28 @@
+# Git ignore — Cisco CP-8945 + Issabel PBX
+
+# ============================================================
+# Configs reais dos dispositivos (contêm MAC e senhas reais)
+# ============================================================
+config_templates/**/SEP[0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f].cnf.xml
+config_templates/**/ITL*.tlv
+config_templates/**/CTL*.tlv
+
+# ============================================================
+# Firmware Cisco (proprietário — não redistribuir)
+# ============================================================
+**/*.bin.sgn
+**/*.bin
+**/*.loads
+**/*.sbn
+
+# ============================================================
+# Diretório PHP com nomes de usuários reais
+# ============================================================
+cisco_directory/directory.php
+
+# ============================================================
+# Sistema
+# ============================================================
+.DS_Store
+Thumbs.db
+*.log

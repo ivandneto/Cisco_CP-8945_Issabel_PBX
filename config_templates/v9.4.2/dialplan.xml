@@ -1,0 +1,4 @@
+<DIALTEMPLATE>
+  <TEMPLATE MATCH="9." Timeout="0"/>
+  <TEMPLATE MATCH="." Timeout="5"/>
+</DIALTEMPLATE>
