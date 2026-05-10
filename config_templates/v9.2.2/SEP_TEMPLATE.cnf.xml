@@ -149,11 +149,11 @@
 <sipLines>
 <line  button="1" lineIndex="1">
 <featureID>9</featureID>
-<featureLabel></featureLabel>
+<featureLabel><RAMAL NAME></featureLabel>
 <proxy>USECALLMANAGER</proxy>
 <port>5066</port>
 <name><RAMAL></name>
-<displayName><RAMAL> - Escritorio</displayName>
+<displayName><RAMAL></displayName>
 <authName><RAMAL></authName>
 <authPassword><SENHA></authPassword>
 <autoAnswer>
