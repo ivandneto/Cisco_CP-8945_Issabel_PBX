@@ -315,7 +315,7 @@ Telefone exibe ramal na tela ..................... ✅
     └── Cisco-7900-and-8800-series-freepbx-setup/  # Referência adicional
 ```
 
-> **⚠️ Atenção:** Os arquivos de firmware (`.bin.sgn`, `.loads`) são proprietários da Cisco e **não estão incluídos** neste repositório. Baixe-os diretamente da Cisco ou de fontes autorizadas.
+> **⚠️ Atenção:** Os arquivos de firmware (`.bin.sgn`, `.loads`) são proprietários da Cisco, mas estão neste repositório. Baixe-os diretamente da Cisco ou de fontes autorizadas por segurança.
 
 ---
 
